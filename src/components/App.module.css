@@ -1,0 +1,11 @@
+.flex_row_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 64em) {
+  .container {
+    display: flex;
+  }
+}

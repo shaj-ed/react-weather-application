@@ -1,0 +1,124 @@
+.search {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-bluish);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-block: 1.25rem;
+  padding-inline: 0.5rem;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.search_open {
+  transform: translateX(0);
+}
+
+.hide_button {
+  display: block;
+  border: 0;
+  outline: 0;
+  font-size: 2rem;
+  background-color: transparent;
+  color: var(--clr-white);
+  margin-inline-start: auto;
+  margin-block-end: 1rem;
+  cursor: pointer;
+}
+
+.hide_button:hover {
+  opacity: 0.8;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.label {
+  flex: 2;
+  padding: 0.9375rem;
+  border: 0.0625rem solid var(--clr-light);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: text;
+}
+
+.input {
+  outline: 0;
+  border: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.input,
+.city_name {
+  color: var(--clr-white);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.input::placeholder {
+  color: var(--clr-light);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.button {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  align-self: stretch;
+  background-color: var(--background-blue);
+  color: var(--clr-white);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.label svg {
+  color: var(--clr-light);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.city_list {
+  margin-block-start: 2.375rem;
+}
+
+.city_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.375rem;
+  padding-inline: 0.75rem;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.city_name svg {
+  opacity: 0.7;
+}
+
+.city_name:hover {
+  border-color: #616475;
+}
+
+@media (min-width: 48em) {
+  .search {
+    padding: 2.625rem;
+  }
+}

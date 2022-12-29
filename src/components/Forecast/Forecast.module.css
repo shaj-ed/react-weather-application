@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  padding-inline: 1.5rem;
+}
+
+.converter {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.converter button {
+  border: 0;
+  outline: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 50%;
+  background-color: var(--background-gray);
+  color: var(--clr-white);
+}
+
+.converter button:hover {
+  opacity: 0.8;
+}
+
+.converter button.active {
+  background-color: var(--clr-white);
+  color: #000;
+}
+
+.wrapper {
+  margin-block-start: 3.125rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5625rem;
+}
+
+@media (min-width: 64em) {
+  .container {
+    padding-inline: 0;
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 88.75em) {
+  .wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

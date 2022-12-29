@@ -1,0 +1,5 @@
+.loading {
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+}

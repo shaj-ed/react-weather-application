@@ -1,0 +1,41 @@
+.header {
+  padding-block-start: 1.125rem;
+  padding-inline: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__button {
+  background-color: var(--background-gray-light);
+  color: var(--clr-white);
+  border: 0;
+}
+
+.header__button:hover {
+  opacity: 0.8;
+}
+
+.header__button_search {
+  composes: header__button;
+  padding-block: 0.625rem;
+  padding-inline: 1.125rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.header__button_icon {
+  composes: header__button;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 48em) {
+  .header {
+    padding: 2.625rem;
+  }
+}

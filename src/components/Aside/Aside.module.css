@@ -1,0 +1,34 @@
+.aside {
+  width: 100%;
+  position: relative;
+  background-color: var(--background-bluish);
+}
+
+.aside::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./../../assets/cloud-background.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 160%;
+  opacity: 0.1;
+}
+
+@media (min-width: 64em) {
+  .aside {
+    max-width: 28.6875rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: scroll;
+  }
+
+  .aside::-webkit-scrollbar {
+    display: none;
+  }
+}

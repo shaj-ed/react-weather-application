@@ -1,0 +1,38 @@
+.card {
+  padding-inline: 1.25rem;
+  padding-block: 1.125rem;
+  color: var(--clr-white);
+  background-color: var(--background-bluish);
+  text-align: center;
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.icon {
+  width: 3.5rem;
+  margin-inline: auto;
+  margin-block-end: 1.875rem;
+  margin-block-start: 0.625rem;
+}
+
+.icon img {
+  width: 100%;
+}
+
+.min,
+.max {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.max {
+  display: inline-block;
+  margin-inline-end: 1rem;
+}
+
+.min {
+  color: var(--clr-light-secondary);
+}

@@ -1,0 +1,51 @@
+/* Variables */
+:root {
+  --font: "Raleway", sans-serif;
+
+  --background-dark: #100e1d;
+  --background-blue: #3c47e9;
+  --background-bluish: #1e213a;
+  --background-gray: #585676;
+  --background-gray-light: #6e707a;
+  --clr-light: #a09fb1;
+  --clr-light-secondary: #88869d;
+  --clr-white: #e7e7eb;
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  line-height: 1.5;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
