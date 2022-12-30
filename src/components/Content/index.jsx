@@ -24,10 +24,13 @@ const Content = () => {
       </div>
       <p className={styles.footer_text}>
         created by
-        <a href="#" className={styles.username}>
+        <a href="https://github.com/shaj-ed" className={styles.username}>
           username
         </a>
-        - <a href="#">devChallenges.io</a>
+        -
+        <a href="https://devchallenges.io/portfolio/shaj-ed">
+          devChallenges.io
+        </a>
       </p>
     </main>
   );
