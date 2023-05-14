@@ -7,14 +7,19 @@ const Header = ({ openSide }) => {
   const { setCity } = useContext(AppContext);
 
   const getCity = async () => {
-    const res = await fetch(
-      `https://ipgeolocation.abstractapi.com/v1/?api_key=${
-        import.meta.env.VITE_IP_API_KEY
-      }`
-    );
-    const data = await res.json();
-    console.log(data.city.toLowerCase());
-    setCity(data.city.toLowerCase());
+    try {
+      const res = await fetch(
+        `https://ipgeolocation.abstractapi.com/v1/?api_key=${
+          import.meta.env.VITE_IP_API_KEY
+        }`
+      );
+      const data = await res.json();
+      const city = data.city.toLowerCase();
+      console.log(city);
+      setCity(city);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleClick = () => {
