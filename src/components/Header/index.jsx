@@ -2,19 +2,23 @@ import React, { useContext, useEffect } from "react";
 import styles from "./Header.module.css";
 import { MdOutlineModeStandby } from "react-icons/md";
 import { AppContext } from "../../context/appContext";
-import useFetch from "../../Hooks/useFetch";
 
 const Header = ({ openSide }) => {
   const { setCity } = useContext(AppContext);
 
-  const { error, data } = useFetch(
-    `https://api.ipgeolocation.io/ipgeo?apiKey=${
-      import.meta.env.VITE_IP_API_KEY
-    }`
-  );
+  const getCity = async () => {
+    const res = await fetch(
+      `https://ipgeolocation.abstractapi.com/v1/?api_key=${
+        import.meta.env.VITE_IP_API_KEY
+      }`
+    );
+    const data = await res.json();
+    console.log(data.city.toLowerCase());
+    setCity(data.city.toLowerCase());
+  };
 
   const handleClick = () => {
-    error ? setCity("london") : setCity(data.city);
+    getCity();
   };
 
   return (
@@ -29,7 +33,7 @@ const Header = ({ openSide }) => {
       <button
         type="button"
         className={styles.header__button_icon}
-        onClick={() => handleClick()}
+        onClick={handleClick}
       >
         <MdOutlineModeStandby />
       </button>
