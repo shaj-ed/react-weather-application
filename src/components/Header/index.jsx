@@ -14,9 +14,8 @@ const Header = ({ openSide }) => {
         }`
       );
       const data = await res.json();
-      const city = data.city.toLowerCase();
-      console.log(city);
-      setCity(city);
+      console.log(data.city);
+      setCity(data.city);
     } catch (error) {
       console.log(error);
     }
